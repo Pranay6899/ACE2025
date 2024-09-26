@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search for Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: Beige;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: Mint;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 60%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .filter {
+            margin-bottom: 20px;
+        }
+
+        .filter label {
+            margin-right: 10px;
+        }
+
+        .restaurant-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .restaurant-item {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .restaurant-item h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .restaurant-item p {
+            margin: 5px 0;
+        }
+
+        .restaurant-item a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Search for Restaurant</h1>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search for restaurants...">
+        </div>
+
+        <div class="filter">
+            <label for="cuisine">Cuisine:</label>
+            <select id="cuisine">
+                <option value="">All</option>
+                <option value="indian">Indian</option>
+                <option value="chinese">Chinese</option>
+                <option value="italian">Italian</option>
+                <option value="mexican">Mexican</option>
+            </select>
+        </div>
+
+        <ul class="restaurant-list">
+            <li class="restaurant-item">
+                <div>
+                    <h2>Next Door Restaurant</h2>
+                    <p>Cuisine: Indian</p>
+                    <p>Address: XXX, Hyderabad</p>
+                </div>
+                <a href="menu.html">View Menu</a>
+            </li>
+            <li class="restaurant-item">
+                <div>
+                    <h2>Wok & Roll</h2>
+                    <p>Cuisine: Chinese</p>
+                    <p>Address: 456 Noodle Street, Hyderabad</p>
+                </div>
+                <a href="menu.html">View Menu</a>
+            </li>
+            <li class="restaurant-item">
+                <div>
+                    <h2>Pizza Paradise</h2>
+                    <p>Cuisine: Italian</p>
+                    <p>Address: 789 Cheese Blvd, Hyderabad</p>
+                </div>
+                <a href="menu.html">View Menu</a>
+            </li>
+            <li class="restaurant-item">
+                <div>
+                    <h2>Taco Fiesta</h2>
+                    <p>Cuisine: Mexican</p>
+                    <p>Address: 321 Taco Ave, Hyderabad</p>
+                </div>
+                <a href="menu.html">View Menu</a>
+            </li>
+            <!-- More restaurant items can be added here -->
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Driver Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        .contact-button {
+            padding: 8px 12px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .status {
+            font-weight: bold;
+        }
+
+        .status.active {
+            color: green;
+        }
+
+        .status.offline {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Delivery Driver Details</h1>
+    
+    <table>
+        <tr>
+            <th>Driver Name</th>
+            <th>Phone Number</th>
+            <th>Vehicle</th>
+            <th>Current Location</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>Suresh</td>
+            <td>+234 567 890</td>
+            <td>Honda</td>
+            <td>4-156/1 Uppal</td>
+            <td class="status active">Active</td>
+            <td><a href="tel:+1234567890" class="contact-button">Contact</a></td>
+        </tr>
+        <tr>
+            <td>Naresh</td>
+            <td>+1 987 6541</td>
+            <td>Suzuki Swift</td>
+            <td>155 Securedrabad</td>
+            <td class="status offline">Offline</td>
+            <td><a href="tel:+1987654321" class="contact-button">Contact</a></td>
+        </tr>
+        <tr>
+            <td>David</td>
+            <td>+1 345 678 901</td>
+            <td>Bullet classic</td>
+            <td>ghatkesar</td>
+            <td class="status active">Active</td>
+            <td><a href="tel:+1345678901" class="contact-button">Contact</a></td>
+        </tr>
+        <tr>
+            <td>Sampath</td>
+            <td>+1 456 789 012</td>
+            <td>Toyota</td>
+            <td>9012 Jubillee hills</td>
+            <td class="status offline">Offline</td>
+            <td><a href="tel:+1456789012" class="contact-button">Contact</a></td>
+        </tr>
+    </table>
+</body>
+</html>

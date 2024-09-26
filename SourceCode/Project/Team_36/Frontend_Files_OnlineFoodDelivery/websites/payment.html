@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:Turquoise;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color:;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .order-summary {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .payment-method {
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Details</h1>
+
+        <div class="order-summary">
+   
+            <h2>Order Summary</h2>
+            <p><strong>Order ID:</strong> 123456</p>
+            <p><strong>Restaurant:</strong> Delicious Eats</p>
+            <p><strong>Total Amount:</strong> Rs.599</p>
+            <p><strong>Items:</strong></p>
+     
+            <ul>
+                <li>Tandoori Chicken - Rs.599</li>
+                <li>Butter Chicken - Rs.229</li>
+                <li>Shawarma - Rs.109</li>
+                <li>Soft Drinks - Rs.50</li>
+            </ul>
+        </div>
+
+        <div class="payment-method">
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" placeholder="Enter your card number" required>
+
+            <label for="card-name">Cardholder Name</label>
+            <input type="text" id="card-name" placeholder="Enter your name " required>
+
+            <label for="expiry-date">Expiry Date</label>
+            <input type="text" id="expiry-date" placeholder="MM/YY" required>
+
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="Enter CVV" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+        </div>
+
+        <a href="OrderPlaced.html"><button type="submit">Complete Payment</button></a>
+    </div>
+
+    <div class="footer">
+        <p>Secure payment processing by [....]</p>
+    </div>
+</body>
+</html>

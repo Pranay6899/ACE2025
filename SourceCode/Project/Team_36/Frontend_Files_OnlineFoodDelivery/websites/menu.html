@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        body {
+            background-color: #F0E68C;            width: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #2f2f2f;         }
+        .image {
+            border-radius: 15px;
+        }
+        .image-small {
+            width: 250px;
+            height: 250px;
+        }
+        .image-medium {
+            width: 350px;
+            height: 250px;
+        }
+        #top {
+            font-size: 50px;
+            color: #8B4513; 
+        }
+        .search {
+            font-size: 24px;
+            padding: 10px;
+            width: 80%;
+            margin: 10px 0;
+            background-color: ghostwhite;
+            color: black;
+            border: 1px solid #D2691E; 
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .column {
+            float: left;
+            width: 20%;
+            padding: 5px;
+        }
+        .row {
+            display: table;
+            width: 100%;
+        }
+        a {
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        nav {
+            padding: 5px;
+            display: flex;
+            justify-content: space-around;
+            cursor: pointer;
+        }
+        #menu {
+            background-color: #D2691E; 
+            margin: 0;
+        }
+        #menu h2 {
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 10px 0;
+        }
+        .column h2 {
+            margin: 10px 0;
+        }
+        .column h5 {
+            font-size: larger;
+        }
+        button {
+            background-color: #FFA500; 
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #8B0000; 
+            color: white;
+        }
+        h1, h4 {
+            margin: 10px;
+            color: #8B4513; 
+        }
+    </style>
+</head>
+<body>
+    <h1>NEXT DOOR INDIAN RESTAURANT</h1>
+    <h4>Uppal</h4>
+    <hr>
+    <div id="menu">
+        <h2>-- MENU --</h2>
+    </div>
+    <hr>
+    <input type="text" class="search" placeholder="Search for dishes">
+    <h3 id="top"><u>BIRYANI</u></h3>
+    <nav>
+        <div class="row">
+            <div class="column">
+                <img src="images.jpeg" class="image image-small" alt="Chicken Biryani">
+                <h2>Chicken Biryani</h2>
+                <h4>Rs.300</h4>
+                <a href="payment.html"><button>ADD</button></a>
+            </div>
+            <div class="column">
+                <img src="mutton.jpg" class="image image-small" alt="Mutton Biryani">
+                <h2>Mutton Biryani</h2>
+                <h5>Rs.450</h5>
+                <a href="payment.html"><button>ADD</button></a>
+            </div>
+            <div class="column">
+                <img src="download.jpeg" class="image image-small" alt="Fish Biryani">
+                <h2>Fish Biryani</h2>
+                <h5>Rs.400</h5>
+                <a href="payment.html"><button>ADD</button></a>
+            </div>
+            <div class="column">
+                <img src="download3.jpeg" class="image image-small" alt="Boneless Chicken Biryani">
+                <h2>Boneless Chicken Biryani</h2>
+                <h5>Rs.440</h5>
+                <a href="payment.html"><button>ADD</button></a>
+            </div>
+            <div class="column">
+                <img src="download4.jpeg" class="image image-small" alt="Prawns Biryani">
+                <h2>Prawns Biryani</h2>
+                <h5>Rs.320</h5>
+                <a href="payment.html"><button>ADD</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <h3 id="top"><u>BREAKFAST</u></h3>
+    <div class="row">
+        <div class="column">
+            <img src="download5.jpeg" class="image image-medium" alt="Bonda">
+            <h2>Bonda</h2>
+            <h5>Rs.35</h5>
+            <a href="payment.html"><button>ADD</button></a>
+        </div>
+        <div class="column">
+            <img src="download6.jpeg" class="image image-medium" alt="Idli">
+            <h2>Idli</h2>
+            <h5>Rs.40</h5>
+            <a href="payment.html"><button>ADD</button></a>
+        </div>
+        <div class="column">
+            <img src="download7.jpeg" class="image image-medium" alt="Puri">
+            <h2>Puri</h5>
+            <h5>Rs.30</h5>
+            <a href="payment.html"><button>ADD</button></a>
+        </div>
+    </div>
+
+    <h3 id="top"><u>LUNCH</u></h3>
+    <div class="row">
+        <div class="column">
+            <img src="download8.jpeg" class="image image-medium" alt="Roti Rice">
+            <h2>Roti Rice</h2>
+            <h5>Rs.250</h5>
+            <a href="payment.html"><button>ADD</button></a>
+        </div>
+        <div class="column">
+            <img src="download9.jpeg" class="image image-medium" alt="Full Meals">
+            <h2>Full Meals</h2>
+            <h5>Rs.300</h5>
+            <a href="payment.html"><button>ADD</button></a>
+        </div>
+        <div class="column">
+            <img src="download10.jpeg" class="image image-medium" alt="Veg Thali">
+            <h2>Veg Thali</h2>
+            <h5>Rs.550</h5>
+            <a href="payment.html"><button>ADD</button></a>
+        </div>
+    </div>
+
+    <h3 id="top"><u>STARTERS</u></h3>
+    <div class="row">
+        <div class="column">
+            <img src="download11.jpeg" class="image image-medium" alt="Kababs">
+            <h2>Kababs</h2>
+            <h5>Rs.330</h5>
+            <a href="payment.html"><button>ADD</button></a>
+        </div>
+        <div class="column">
+            <img src="download12.jpeg" class="image image-medium" alt="Paneer Tikka">
+            <h2>Paneer Tikka</h2>
+            <h5>Rs.250</h5>
+            <a href="payment.html"><button>ADD</button></a>
+        </div>
+        <div class="column">
+            <img src="download13.jpeg" class="image image-medium" alt="Kakori Kababs">
+            <h2>Kakori Kababs</h2>
+            <h5>Rs.290</h5>
+            <a href="payment.html"><button>ADD</button></a>
+        </div>
+    </div>
+
+    <h3 id="top"><u>SOFT DRINKS</u></h3>
+    <div class="row">
+        <div class="column">
+            <img src="download14.jpeg" class="image image-small" alt="Coke Zero">
+            <h2>Coke Zero</h2>
+            <h5>Rs.150</h5>
+            <a href="payment.html"><button>ADD</button></a>
+        </div>
+        <div class="column">
+            <img src="download15.jpeg" class="image image-small" alt="Fanta">
+            <h2>Fanta</h2>
+            <h5>Rs.180</h5>
+            <a href="payment.html"><button>ADD</button></a>
+        </div>
+        <div class="column">
+            <img src="download16.jpeg" class="image image-small" alt="Diet Pepsi">
+            <h2>Diet Pepsi</h2>
+            <h5>Rs.200</h5>
+            <a href="payment.html"><button>ADD</button></a>
+        </div>
+    </div>
+
+    <h3 id="top"><u>DESSERTS</u></h3>
+    <div class="row">
+        <div class="column">
+            <img src="download17.jpeg" class="image image-small" alt="Ice Cream">
+            <h2>Ice Cream</h2>
+            <h5>Rs.200</h5>
+            <a href="payment.html"><button>ADD</button></a>
+        </div>
+        <div class="column">
+            <img src="download18.jpeg" class="image image-small" alt="Brownie">
+            <h2>Brownie</h2>
+            <h5>Rs.320</h5>
+            <a href="payment.html"><button>ADD</button></a>
+        </div>
+        <div class="column">
+            <img src="download19.jpeg" class="image image-small" alt="Cake">
+            <h2>Cake</h2>
+            <h5>Rs.400</h5>
+            <a href="payment.html"><button>ADD</button></a>
+        </div>
+    </div>
+</body>
+</html>
+

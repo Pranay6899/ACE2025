@@ -1,0 +1,155 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery</title>
+    <style>
+        #title1 {
+            font-family: Cursive;
+            color: white;
+        }
+        
+        .top {
+            background-color: #F0F8FF;
+            padding: 20px;
+        }
+
+        .a {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            margin: 4px 2px;
+        }
+
+        .s {
+            background-image: url("world-food-day.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        nav {
+            background-color: #585858;
+            opacity: 80%;
+            color: white;
+            text-align: center;
+            width: 100%;
+            height: auto;
+            padding: 6px;
+            font-size: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+
+        .container {
+            color: white;
+            font-family: "Times New Roman", sans-serif, Arial;
+            font-size: 40px;
+            padding: 0px 0px 0px 100px;
+        }
+
+        #search {
+            background-color: green;
+            border: solid;
+            color: red;
+            border-radius: 50%;
+            font-family: Fantasy;
+            padding: 10px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            box-shadow: 0 8px 16px 0 black;
+        }
+
+        .table {
+            color: white;
+            background-color: #A0A0A0;
+            font-size: 20px;
+            font-family: Calibri;
+            padding: 10px;
+        }
+
+        .food-item img {
+            height: 160px;
+            width: 160px;
+        }
+
+        hr {
+            border: 1px solid black;
+        }
+
+        marquee {
+            color: white;
+            background-color: #A0A0A0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="s">
+        <nav>
+            <a href="AboutUs.html" class="a">ABOUT US</a>
+            <a href="LOGIN.html" class="a">LOGIN</a>
+            <a href="customer.html" class="a">CUSTOMER</a>
+            <a href="driver.html" class="a">Delivery Boy Details</a>
+            <a href="coupons.html" class="a">COUPONS</a>
+        </nav>
+
+        <div class="container">
+            <h1>Are You Hungry?</h1>
+            <p>Don't wait!!!</p>
+            <p>Let's start to order food now</p>
+            <a id="search" href="searcForRestro.html">Search for Restaurant</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="top">
+        <center>
+            <h2>TOP FAVORITE FOOD</h2>
+            <table style="font-size:20px;">
+                <tr>
+                    <td>
+                        <figure class="food-item">
+                            <img src="tandoori.jpeg" alt="Tandoori Chicken">
+                            <figcaption>TANDOORI CHICKEN:<br> <strike>Rs.739</strike> Rs.539</figcaption>
+                        </figure>
+                    </td>
+                    <td>
+                        <figure class="food-item">
+                            <img src="butter.jpeg" alt="Butter Chicken">
+                            <figcaption>BUTTER CHICKEN:<br><strike>Rs.499</strike> Rs.349</figcaption>
+                        </figure>
+                    </td>
+                    <td>
+                        <figure class="food-item">
+                            <img src="booti.jpeg.jpg" alt="Booti Kabab">
+                            <figcaption>BOOTI KABAB:<br><strike>Rs.699</strike> Rs.599</figcaption>
+                        </figure>
+                    </td>
+                    <td>
+                        <figure class="food-item">
+                            <img src="shawarma.jpg" alt="Chicken Shawarma">
+                            <figcaption>CHICKEN SHAWARMA:<br><strike>Rs.299</strike> Rs.199</figcaption>
+                        </figure>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </div>
+
+    <hr>
+
+    <div class="table">
+        <marquee>The offers of this restaurant will be held on any special occasion like Weddings, Birthdays, Anniversaries @restaurant.in</marquee>
+    </div>
+</body>
+</html>
