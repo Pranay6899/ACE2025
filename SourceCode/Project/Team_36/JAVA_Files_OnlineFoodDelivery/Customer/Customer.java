@@ -14,15 +14,20 @@ public class Customer{
 	}
 
 	public int getCustomerId() {
-		return getCustomerId();
+	    return customerId;
 	}
+
 	public String getCustomerName() {
-		return getCustomerName();
+	    return customerName;
 	}
+
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 	public String getAddress() {
 		return address;
 	}
+	public void setCustomerId(int customerId) {
+	   this.customerId=customerId;
 	}
+}

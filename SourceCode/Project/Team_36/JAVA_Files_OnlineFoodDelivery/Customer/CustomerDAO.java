@@ -45,28 +45,28 @@ public class CustomerDAO {
         return false;
     }
 
-    public void deleteFromCustomer(int customerId) {
-    	String deleteDelivery="DELETE FROM foodweb.Delivery WHERE order_id=?";
-    	 String deleteOrdersQuery = "DELETE FROM foodweb.order WHERE customer_id = ?";
-        String deleteQuery = "DELETE FROM customer WHERE customer_id = ?";
-        
-        
+    public void deleteFromCustomer(int customerId){
+        String deleteCustomerQuery = "DELETE FROM customer WHERE customer_id = ?";
+
         try {
         	Connection con = DbConnection.getConnection();
-             PreparedStatement ps = con.prepareStatement(deleteQuery);
-             PreparedStatement psOrders = con.prepareStatement(deleteOrdersQuery);
-             PreparedStatement psDelivery = con.prepareStatement(deleteDelivery);
- 
-             psOrders.setInt(1, customerId);
-            psOrders.executeUpdate();
-            
-            ps.setInt(1, customerId);
-            ps.executeUpdate();
+             PreparedStatement psCustomer = con.prepareStatement(deleteCustomerQuery);
+
+
+            // Deleting the customer
+            psCustomer.setInt(1, customerId);
+            int rowsAffected = psCustomer.executeUpdate();
+
+            if (rowsAffected > 0) {
                 System.out.println("Customer with ID " + customerId + " has been deleted.");
-        } catch (Exception e) {
+            } else {
+                System.out.println("No customer found with ID " + customerId + ".");
+            }
+        }catch (Exception e) {
             e.printStackTrace();
         }
     }
+
 
     public void updateCustomer(int customerId, String phoneNumber) {
 

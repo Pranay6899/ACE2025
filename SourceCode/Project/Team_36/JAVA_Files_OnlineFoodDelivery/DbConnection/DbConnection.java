@@ -1,5 +1,5 @@
 package DbConnection;
-		// TODO Auto-generated constructor stubimport java.sql.Connection;
+		
 		import java.sql.*;
 		import java.util.*;
 		public class DbConnection {

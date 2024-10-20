@@ -15,10 +15,10 @@ import Exceptions.InvalidCustomerInputException;
 
 public class CustomerUtility{
     private static List<Customer> customerList=new ArrayList<>();
-
+    private Scanner s;
     public void createCustomer() {
        
-        Scanner s=new Scanner(System.in);
+        s=new Scanner(System.in);
         try {
         	int id=idGeneration();
         System.out.println("generated id is: "+id);
@@ -59,7 +59,7 @@ public class CustomerUtility{
     }
 
     public void readCustomer() throws CustomerNotFoundException{
-        Scanner s = new Scanner(System.in);
+        s = new Scanner(System.in);
         CustomerDAO dao=new CustomerDAO();
         customerList=dao.getAllCustomers();
         System.out.println("Enter the name, address, or phone number of the customer to search for:");
@@ -81,7 +81,7 @@ public class CustomerUtility{
     }
 
     public void updateCustomer(){
-        Scanner s = new Scanner(System.in);
+        s = new Scanner(System.in);
         try {
             System.out.println("Enter Customer Id");
             int customerId = s.nextInt();
@@ -114,7 +114,7 @@ public class CustomerUtility{
     }
 
     public void deleteCustomer(){
-        Scanner s = new Scanner(System.in);  
+        s = new Scanner(System.in);  
         try {
             System.out.println("Enter Customer ID to delete:");
             int customerId = s.nextInt();
@@ -140,11 +140,16 @@ public class CustomerUtility{
     }
 
     public void displayCustomer() {
-    	CustomerDAO dao=new CustomerDAO();
-        customerList=dao.getAllCustomers();
-        System.out.format("%-5s %-15s %-10s %s\n","ID","Name","address","phoneNumber");
-        for(Customer c:customerList) {
-        	System.out.format("%-5s %-15s %-10s %s\n",c.getCustomerId(),c.getCustomerName(),c.getAddress(),c.getPhoneNumber());        }
-    
-}
+        CustomerDAO dao = new CustomerDAO();
+        customerList = dao.getAllCustomers();
+        if (customerList.isEmpty()) {
+            System.out.println("No customers found.");
+            return; // Exit early if no customers are found
+        }
+
+        System.out.format("%-5s %-15s %-10s %s\n", "ID", "Name", "address", "phoneNumber");
+        for (Customer c : customerList) {
+            System.out.format("%-5s %-15s %-10s %s\n", c.getCustomerId(),c.getCustomerName(), c.getAddress(), c.getPhoneNumber());
+        }
+    }
 }

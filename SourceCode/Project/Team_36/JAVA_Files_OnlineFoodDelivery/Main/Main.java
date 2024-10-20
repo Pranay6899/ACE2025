@@ -34,22 +34,22 @@ public class Main {
 
             switch (entityChoice) {
                 case 1:
-                    CustomerOperations(s, r1);
+                    CustomerOperations(s,r1);
                     break;
                 case 2:
-                    DeliveryOperations(s, r2);
+                    DeliveryOperations(s,r2);
                     break;
                 case 3:
-                    DriverOperations(s, r3);
+                    DriverOperations(s,r3);
                     break;
                 case 4:
-                    MenuOperations(s, r4);
+                    MenuOperations(s,r4);
                     break;
                 case 5:
-                    OrderOperations(s, r6);
+                    OrderOperations(s,r6);
                     break;
                 case 6:
-                    PaymentOperations(s, r5);
+                    PaymentOperations(s,r5);
                     break;
                 case 7:
                     PromotionOperations(s, r7);

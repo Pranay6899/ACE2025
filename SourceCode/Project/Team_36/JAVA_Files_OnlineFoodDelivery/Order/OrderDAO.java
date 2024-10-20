@@ -10,15 +10,13 @@ import Exceptions.*;
 
 public class OrderDAO {
 
-    // Retrieve all orders from the database
     public List<Order> getAllOrders() {
         List<Order> orderList = new ArrayList<>();
         try {
             Connection con = DbConnection.getConnection();
             Statement stm = con.createStatement();
-            ResultSet rs = stm.executeQuery("SELECT * FROM orders");
+            ResultSet rs = stm.executeQuery("SELECT * FROM foodweb.order");
 
-            // Loop through each result row and create an Order object
             while (rs.next()) {
                 Order order = new Order(
                     rs.getLong("order_id"), 
@@ -28,17 +26,17 @@ public class OrderDAO {
                     rs.getDouble("total_price"), 
                     rs.getString("status")
                 );
-                orderList.add(order); // Add each order to the list
+                orderList.add(order);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return orderList; // Return the list of orders
+        return orderList; 
     }
 
     // Retrieve an order by ID
     public Order getOrderById(Long orderId) throws OrderNotFoundException {
-        String query = "SELECT * FROM orders WHERE order_id = ?";
+        String query = "SELECT * FROM order WHERE order_id = ?";
         Order order = null;
         try {
             Connection con = DbConnection.getConnection();
@@ -66,7 +64,7 @@ public class OrderDAO {
 
     // Insert a new order into the database
     public boolean insertOrder(Order order) throws InvalidOrderStateException {
-        String query = "INSERT INTO orders (order_id, customer_id, restaurant_id, delivery_address, total_price, status) VALUES (?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO order (order_id, customer_id, restaurant_id, delivery_address, total_price, status) VALUES (?, ?, ?, ?, ?, ?)";
         try {
             Connection con = DbConnection.getConnection();
             PreparedStatement ps = con.prepareStatement(query);
@@ -91,7 +89,7 @@ public class OrderDAO {
 
     // Update an order's status
     public boolean updateOrderStatus(Long orderId, String status) throws InvalidOrderStateException, OrderNotFoundException {
-        String query = "UPDATE orders SET status = ? WHERE order_id = ?";
+        String query = "UPDATE order SET status = ? WHERE order_id = ?";
         try {
             Connection con = DbConnection.getConnection();
             PreparedStatement ps = con.prepareStatement(query);
@@ -111,11 +109,12 @@ public class OrderDAO {
 
     // Delete an order from the database
     public void deleteOrder(Long orderId) throws OrderNotFoundException {
-        String query = "DELETE FROM orders WHERE order_id = ?";
+
+        String query = "DELETE FROM order WHERE order_id = ?";
         try {
             Connection con = DbConnection.getConnection();
             PreparedStatement ps = con.prepareStatement(query);
-            ps.setLong(1, orderId);
+            
             int result = ps.executeUpdate(); // Execute the delete operation
 
             if (result == 0) {
